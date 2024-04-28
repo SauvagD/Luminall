@@ -3,31 +3,65 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --background: #171717;
+/*   --primary-color: #F6FA97; */
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--background);
+  overflow-y: auto;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+html::-webkit-scrollbar {
+  width: 10px;
+  display: none;
+  background: transparent;
+}
+
+html::-webkit-scrollbar-track {
+  background-position: -10px;
+  background: var(--background);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #F6FA97;
+  border-radius: 5px;
+
+}
+
+.video-container {
+  width: 100%;
+  max-height: calc(100vh - 56px);
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  position: relative;
+}
+
+.shadow {
+  text-shadow: rgba(255, 255, 255, 0.8) 1px 0 10px;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.custom-shadow {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 80%);
+}
+
+.last-work-card {
+
+}
+
+.lumiere {
+
+  /* Couleur de fond */
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8) inset;
+  /* Lumière avec un dégradé */
 }
