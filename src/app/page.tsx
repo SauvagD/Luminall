@@ -1,5 +1,6 @@
 import Image from "next/image";
 import testImg from "../../public/images/full-shot-ninja-wearing-equipment_23-2150961100.jpg";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -26,14 +27,17 @@ export default function Home() {
       <div className="custom-shadow"></div>
       <div className="container mx-auto">
         <div>
-          <h2 className="shadow uppercase text-5xl text-white drop-shadow-2xl">
+          <h2 className="shadow uppercase text-5xl text-yellow-300 drop-shadow-2xl">
             Last Work
           </h2>
           <div className="grid grid-rows-2 grid-cols-2 gap-6">
-            <div className="hover:shadow-2xl col-span-1 rounded overflow-hidden aspect-image">
+            <Link
+              href="/projects/test"
+              className="hover:shadow-2xl cursor-pointer col-span-1 rounded overflow-hidden aspect-image"
+            >
               <Image src={testImg} alt="" />
-            </div>
-            <div className=" col-span-1 rounded">
+            </Link>
+            <div className="col-span-1 rounded">
               <Image src={testImg} alt="" />
             </div>
             <div className="col-span-2 rounded overflow-hidden h-80">
@@ -48,14 +52,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex">
-          <button className="text-color-blue mx-auto">see more</button>
+        <div className="flex justify-center	">
+          <Link href="/projects">
+            <button className="transition ease-in-out duration-300 text-yellow-300 mx-auto font-medium text-xl uppercase w-80 h-20 border border-2 border-yellow-300 hover:bg-yellow-300 hover:text-black ">
+              see more
+            </button>
+          </Link>
         </div>
-        {/*         <div>
-          <h2 className="shadow uppercase text-5xl text-white drop-shadow-2xl">
-            Last Work
-          </h2>
-        </div> */}
       </div>
     </div>
   );

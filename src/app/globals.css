@@ -4,7 +4,7 @@
 
 :root {
   --background: #171717;
-/*   --primary-color: #F6FA97; */
+  --primary-color: #f6fa97;
 }
 
 body {
@@ -26,9 +26,8 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #F6FA97;
+  background: #f6fa97;
   border-radius: 5px;
-
 }
 
 .video-container {
@@ -42,7 +41,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .shadow {
-  text-shadow: rgba(255, 255, 255, 0.8) 1px 0 10px;
+  text-shadow: var(--primary-color) 1px 0 10px;
 }
 
 video {
@@ -52,16 +51,43 @@ video {
 }
 
 .custom-shadow {
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 80%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
 }
 
 .last-work-card {
-
 }
 
 .lumiere {
-
   /* Couleur de fond */
   box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8) inset;
   /* Lumière avec un dégradé */
+}
+
+.custom-screen-height {
+  height: calc(100vh - 70px);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  &:has(:nth-child(1):hover) {
+    grid-template-columns: 1.5fr 0.5fr 0.5fr;
+    grid-template-rows: 1.5fr 0.5fr 0.5fr;
+  }
+  &:has(:nth-child(2):hover) {
+    grid-template-columns: 0.5fr 1.5fr 0.5fr;
+    grid-template-rows: 1.5fr 0.5fr 0.5fr;
+  }
+  &:has(:nth-child(3):hover) {
+    grid-template-columns: 0.5fr 0.5fr 1.5fr;
+    grid-template-rows: 1.5fr 0.5fr 0.5fr;
+  }
 }
