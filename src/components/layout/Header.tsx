@@ -25,6 +25,13 @@ const Header = () => {
             Accueil
           </Link>
           <Link
+            href="/#about"
+            className="uppercase font-bold text-3xl"
+            onClick={() => setOpened(false)}
+          >
+            A propos
+          </Link>
+          <Link
             href="/#projects"
             className="uppercase font-bold text-3xl"
             onClick={() => setOpened(false)}

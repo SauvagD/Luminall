@@ -23,10 +23,13 @@ const Navbar = ({ setOpened, opened }: any) => {
     <>
       <Burger opened={opened} toggle={() => setOpened((v: boolean) => !v)} />
       <nav className="flex-row gap-4 text-sm justify-center hidden sm:flex">
-        <Link href="/#projects" className="text-lg">
+        <Link href="/#about" className="text-lg font-bold">
+          A propos
+        </Link>
+        <Link href="/#projects" className="text-lg font-bold">
           Projets
         </Link>
-        <Link href="/#contact" className="text-lg">
+        <Link href="/#contact" className="text-lg font-bold">
           Contact
         </Link>
       </nav>

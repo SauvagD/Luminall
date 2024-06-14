@@ -44,6 +44,8 @@ const HomeGallery = () => {
     });
   }, [api]);
 
+  console.log("api", api);
+
   return (
     <div className="flex flex-col gap-6">
       <Carousel
@@ -72,9 +74,10 @@ const HomeGallery = () => {
             <div
               key={index}
               className={`rounded-full ${background} w-4 h-4 cursor-pointer`}
-              onClick={() =>
-                setCurrentImgIndex(index - 1) + api?.scrollTo(index)
-              }
+              onClick={() => {
+                setCurrentImgIndex(index - 1);
+                api?.scrollTo(index);
+              }}
             />
           );
         })}
