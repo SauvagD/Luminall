@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { Input } from "@/components/ui/input";
+import { Button } from "../ui/button";
 import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
-import { Button } from "../ui/button";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -36,7 +36,11 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="text-white flex flex-col gap-6 lg:max-w-[60%] mx-auto">
+    <div
+      className="text-white flex flex-col gap-6 lg:max-w-[60%] mx-auto"
+      id="contact
+      "
+    >
       <div className="flex flex-col gap-4 items-center lg:max-w-[80%] text-xl mx-auto">
         <h2 className="shadow text-center uppercase text-3xl sm:text-5xl text-white drop-shadow-2xl">
           Contact us
@@ -57,13 +61,23 @@ const ContactForm = () => {
           <Label htmlFor="nom" className="text-2xl">
             Nom
           </Label>
-          <Input type="nom" id="nom" placeholder="Votre nom." />
+          <Input
+            type="nom"
+            id="nom"
+            placeholder="Votre nom."
+            onChange={(e) => setName(e.target.value)}
+          />
         </div>
         <div className="grid w-full items-center gap-3">
           <Label htmlFor="email" className="text-2xl">
             Email
           </Label>
-          <Input type="email" id="email" placeholder="Votre mail." />
+          <Input
+            type="email"
+            id="email"
+            placeholder="Votre mail."
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
         <div className="grid w-full gap-3">
           <Label htmlFor="message" className="text-2xl">
@@ -73,6 +87,7 @@ const ContactForm = () => {
             placeholder="Dites nous tout."
             id="message"
             className="h-52"
+            onChange={(e) => setMessage(e.target.value)}
           />
         </div>
         <Button

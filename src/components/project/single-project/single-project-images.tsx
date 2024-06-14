@@ -10,6 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import { getImageName } from "@/lib/utils";
 
 const ProjectCarousel = ({ images, currentMainImgIndex, onSelectImg }: any) => {
   return (
@@ -44,7 +45,7 @@ const ProjectCarousel = ({ images, currentMainImgIndex, onSelectImg }: any) => {
 
                 <Image
                   src={imageSrc}
-                  alt="temp"
+                  alt={getImageName(imageSrc)}
                   width={1000}
                   height={500}
                   style={{
@@ -79,7 +80,7 @@ const SingleProjectImages = ({ images }: { images: string[] }) => {
     }
     return (
       <Image
-        alt="title"
+        alt={getImageName(images[mainImg])}
         src={images[mainImg]}
         width={1000}
         height={600}
@@ -94,11 +95,13 @@ const SingleProjectImages = ({ images }: { images: string[] }) => {
   return (
     <div className="flex flex-col gap-6">
       <div className="relative w-full">{renderContent()}</div>
-      <ProjectCarousel
-        images={images}
-        currentMainImgIndex={mainImg}
-        onSelectImg={setMainImg}
-      />
+      {images.length > 1 && (
+        <ProjectCarousel
+          images={images}
+          currentMainImgIndex={mainImg}
+          onSelectImg={setMainImg}
+        />
+      )}
     </div>
   );
 };

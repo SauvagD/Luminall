@@ -1,20 +1,36 @@
-import Link from "next/link";
+"use client";
 
-const Navbar = () => {
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
+const Burger = ({ toggle, opened }: any) => {
+  const renderContent = () => {
+    if (opened) {
+      return <Image src={"/icons/close.svg"} width={30} height={30} alt="" />;
+    }
+    return <Image src={"/icons/burger.svg"} width={30} height={30} alt="" />;
+  };
   return (
-    <header className="flex flex-row justify-between items-end w-screen text-white bg-background fixed top-0 left-0 right-0 px-8 py-2 z-10	">
-      <Link href="/" className="uppercase text-3xl font-semibold	">
-        LUMINALL
-      </Link>
-      <nav className="flex flex-row gap-4 text-sm justify-center ">
-        <Link href="/about" className="text-lg">
+    <div className="block sm:hidden" onClick={() => toggle()}>
+      {renderContent()}
+    </div>
+  );
+};
+
+const Navbar = ({ setOpened, opened }: any) => {
+  return (
+    <>
+      <Burger opened={opened} toggle={() => setOpened((v: boolean) => !v)} />
+      <nav className="flex-row gap-4 text-sm justify-center hidden sm:flex">
+        <Link href="/#projects" className="text-lg">
           Projets
         </Link>
-        <Link href="/porfolio" className="text-lg">
+        <Link href="/#contact" className="text-lg">
           Contact
         </Link>
       </nav>
-    </header>
+    </>
   );
 };
 
