@@ -2,25 +2,24 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   const body = await req.json();
-  console.log("req", body);
   const { email, message, name } = body;
   // Configure the transporter for sending email
   const transporter = nodemailer.createTransport({
-    service: "gmail",
-    host: "smtp.gmail.com",
+    host: "smtp.ionos.fr",
+    port: 587,
+    secure: false,
     auth: {
-      user: "ds.sauvage@gmail.com", // Your email
-      pass: "ladt ijmn bkuc ekav", // Your email password
+      user: "contact@luminall-studio.com",
+      pass: "Z79pgsJmwCyC5KGA",
     },
   });
 
-  // Email options
   const mailOptions = {
-    from: email,
-    sender: email,
-    to: "ds.sauvage@gmail.com",
+    from: "contact@luminall-studio.com",
+    to: "contact@luminall-studio.com",
     subject: `Luminall contact ${name}`,
     text: message,
+    replyTo: email,
   };
 
   try {

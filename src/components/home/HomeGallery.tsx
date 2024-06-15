@@ -15,15 +15,17 @@ const HomeSlide = ({ images, title }: any) => {
   return (
     <CarouselItem>
       <div className="video-container w-full h-screen overflow-hidden flex justify-center items-center">
-        <div className="video absolute top-0 left-1/2 transform -translate-x-1/2 h-full rounded">
-          <Image
-            src={images[0]}
-            alt={title}
-            width={2000}
-            height={2000}
-            style={{ maxWidth: "unset" }}
-          />
-        </div>
+        <Image
+          src={images[0]}
+          alt={title}
+          width={1500}
+          height={1500}
+          className="video absolute top-0 left-1/2 transform -translate-x-1/2 h-[90vh] rounded object-cover "
+          style={{
+            width: "100%",
+            maxWidth: "unset",
+          }}
+        />
       </div>
     </CarouselItem>
   );

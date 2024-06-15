@@ -6,12 +6,10 @@ const Footer = () => {
         <p className="text-lg text-[#C9C9C9]">Section</p>
       </div>
       <div className=" flex flex-col gap-2 justify-center items-center">
-        <p className="text-xl text-white font-medium">Title</p>
-        <p className="text-lg text-[#C9C9C9]">Section</p>
+        <p className="text-xl text-white font-medium">Luminall</p>
       </div>
       <div className=" flex flex-col gap-2 justify-center items-center">
-        <p className="text-xl text-white font-medium">Title</p>
-        <p className="text-lg text-[#C9C9C9]">Section</p>
+        <p className="text-lg text-[#C9C9C9]">@Copyright Luminal-studio</p>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("Sending...");
+    setStatus("L'envoi est en cours");
 
     const res = await fetch("/api/contact", {
       method: "POST",
@@ -29,9 +29,9 @@ const ContactForm = () => {
       setName("");
       setEmail("");
       setMessage("");
-      setStatus("Message sent successfully!");
+      setStatus("L'email a bien été envoyé !");
     } else {
-      setStatus("Failed to send message.");
+      setStatus("Un problème est apparu. Veuillez réessayez");
     }
   };
 
@@ -49,9 +49,7 @@ const ContactForm = () => {
               color: "#C9C9C9",
             }}
           >
-            But I must explain to you how all this mistaken idea of denouncing
-            pleasure and praising pain was born and I will give you a complete
-            account of the system.
+            contact@luminal-studio.com
           </h3>
         </div>
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
@@ -94,6 +92,7 @@ const ContactForm = () => {
           >
             Envoyer
           </Button>
+          <p className="text-center font-medium">{status}</p>
           <div className="flex flex-row gap-4 items-center">
             <div className="flex-1 h-[1px] bg-white" />
             <div>Social medias</div>

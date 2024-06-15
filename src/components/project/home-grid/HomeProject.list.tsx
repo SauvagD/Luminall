@@ -26,6 +26,9 @@ const HomeProjectListItem = ({
       className={`transition transition-all ease-in-out duration-300 relative hover:z-10 ${
         isLastAndImpair ? "" : "sm:hover:scale-125"
       } hover:shadow-2xl cursor-pointer ${className} rounded overflow-hidden aspect-image ${lastSection}`}
+      style={{
+        aspectRatio: 1.8,
+      }}
     >
       {isHovered && (
         <div className="flex flex-col justify-end gap-4 absolute bottom-0 right-0 left-0  bg-gradient-to-t from-black to-bg-background bg-opacity-50 h-3/6 p-6">

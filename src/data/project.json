@@ -4,13 +4,13 @@
     "reference": "loreal-2024",
     "description": "Projet produit en étroite collaboration avec Lacrapule Studio à l’occasion du concours Style&Colour Trophy de L’Oréal Professionnel 2024 sur le thème Utopia. Pour une première parti technique nous avons travaillé sur le groom, le shading, lighting, les caméras et les rendus. Lors de cette collaboration nous avons pu conseiller, orienter et participer sur certains axes à la direction artistique du projet.",
     "images": [
-      "/images/projects/LOREAL/wide_front_2024.jpg",
-      "/images/projects/LOREAL/wide_back_2024.jpg",
-      "/images/projects/LOREAL/2024_breakdown/albedo.png",
-      "/images/projects/LOREAL/2024_breakdown/AO.png",
-      "/images/projects/LOREAL/2024_breakdown/clay.png",
-      "/images/projects/LOREAL/2024_breakdown/clay_07.png",
-      "/images/projects/LOREAL/2024_breakdown/wireframe.png"
+      "/images/projects/Loreal/wide_front_2024.jpg",
+      "/images/projects/Loreal/wide_back_2024.jpg",
+      "/images/projects/Loreal/albedo.jpg",
+      "/images/projects/Loreal/AO.jpg",
+      "/images/projects/Loreal/clay.jpg",
+      "/images/projects/Loreal/clay_07.jpg",
+      "/images/projects/Loreal/wireframe.jpg"
     ]
   },
   {
@@ -18,10 +18,10 @@
     "reference": "loreal-2023",
     "description": "Projet produit en étroite collaboration avec Lacrapule Studio à l’occasion du concours Style&Colour Trophy de L’Oréal Professionnel 2023 sur le thème METAHAIR. Pour une première parti technique nous avons travaillé sur le groom, le shading, lighting, les caméras et les rendus. Lors de cette collaboration nous avons pu conseiller, orienter et participer sur certains axes à la direction artistique du projet.",
     "images": [
-      "/images/projects/LOREAL/wide_2023.jpg",
-      "/images/projects/LOREAL/close_2023.jpg",
-      "/images/projects/LOREAL/back_2023.png",
-      "/images/projects/LOREAL/LOREAL_retake_16.9_v2.mov"
+      "/images/projects/Loreal/wide_2023.jpg",
+      "/images/projects/Loreal/close_2023.jpg",
+      "/images/projects/Loreal/back_2023.jpg",
+      "/images/projects/Loreal/LOREAL_retake_16.9_v2.mov"
     ]
   },
   {
@@ -29,12 +29,28 @@
     "reference": "capucin",
     "description": "FULL CG - ALL ASPECTS",
     "images": [
-      "/images/projects/kpucin/kpucin_close_up.png",
-      "/images/projects/kpucin/kpucin_wide.png",
-      "/images/projects/kpucin/wireframe_close_up.png",
-      "/images/projects/kpucin/wireframe_wide.png",
-      "/images/projects/kpucin/close_up_albedo.png",
-      "/images/projects/kpucin/albedo_wide.jpg"
+      "/images/projects/Capucin/capucin_close_up.jpg",
+      "/images/projects/Capucin/capucin_wide.jpg",
+      "/images/projects/Capucin/wireframe_close_up.jpg",
+      "/images/projects/Capucin/wireframe_wide.jpg",
+      "/images/projects/Capucin/close_up_albedo.jpg",
+      "/images/projects/Capucin/albedo_wide.jpg"
+    ]
+  },
+  {
+    "title": "Buffle",
+    "reference": "buffle",
+    "description": "FULL CG - ALL ASPECTS",
+    "images": [
+      "/images/projects/Buffle/cam01.jpg",
+      "/images/projects/Buffle/cam2.jpg",
+      "/images/projects/Buffle/cam1_albedo_poils.jpg",
+      "/images/projects/Buffle/cam1_specs_poils.jpg",
+      "/images/projects/Buffle/turn.1.jpg",
+      "/images/projects/Buffle/turn.2.jpg",
+      "/images/projects/Buffle/turn.3.jpg",
+      "/images/projects/Buffle/skin_albedo.jpg",
+      "/images/projects/Buffle/skin_spec.jpg"
     ]
   },
   {
@@ -42,24 +58,34 @@
     "reference": "baleine",
     "description": "FULL CG - ALL ASPECTS",
     "images": [
-      "/images/projects/Baleine/Master_2.png",
-      "/images/projects/Baleine/Master_1.png",
-      "/images/projects/Baleine/wire_frame_view.png",
-      "/images/projects/Baleine/clay.png",
-      "/images/projects/Baleine/ambient_occlusion.png"
+      "/images/projects/Baleine/master_2.jpg",
+      "/images/projects/Baleine/master_1.jpg",
+      "/images/projects/Baleine/wireframe.jpg",
+      "/images/projects/Baleine/clay.jpg",
+      "/images/projects/Baleine/ambient_occlusion.jpg"
     ]
   },
   {
     "title": "Dragon",
     "reference": "dragon",
     "description": "FULL CG - ALL ASPECTS",
-    "images": ["/images/projects/back_GTR.png"]
+    "images": [
+      "/images/projects/Dragon/profile_3_4_light.jpg",
+      "/images/projects/Dragon/profile_light.jpg",
+      "/images/projects/Dragon/profile_red_light.jpg"
+    ]
+  },
+  {
+    "title": "PACKSHOT BREWDOG",
+    "reference": "packshot-brewdog",
+    "description": "FULL CG - ALL ASPECTS",
+    "images": ["/images/projects/punk_ipa_packshot.jpg"]
   },
   {
     "title": "GTR studio shot",
     "reference": "gtr-studio-shot",
     "description": "FULL CG - Lighting, Shading, Rendering",
-    "images": ["/images/projects/back_GTR.png"]
+    "images": ["/images/projects/back_GTR.jpg"]
   },
   {
     "title": "CASE STUDY - WEST SEA WORLD",
@@ -88,7 +114,14 @@
     "title": "Barbossa",
     "reference": "barbossa",
     "description": "FULL CG - ALL ASPECTS",
-    "images": ["/images/projects/minekraft_house_light.jpg"]
+    "images": [
+      "/images/projects/barbossa/close_up_breakdown_001.jpg",
+      "/images/projects/barbossa/close_up_breakdown_010.jpg",
+      "/images/projects/barbossa/close_up_breakdown_062.jpg",
+      "/images/projects/barbossa/close_up_breakdown_088.jpg",
+      "/images/projects/barbossa/barbossa_body.mov",
+      "/images/projects/barbossa/tete_barbossa.mov"
+    ]
   },
   {
     "title": "PULL & BEAR",
@@ -97,15 +130,19 @@
     "images": ["/images/projects/Pull&Bear/01-Pull-Bear.jpg"]
   },
   {
-    "title": "OURS",
-    "reference": "pull-and-bear",
-    "description": "Projet produit en collaboration avec Lacrapule Studio pour une campagne d’affichage en boutique Pull&Bear. Pour une première parti technique nous avons travaillé sur le shading, lighting, les caméras et les rendus.",
-    "images": ["/images/projects/Pull&Bear/01-Pull-Bear.jpg"]
-  },
-  {
     "title": "ORC",
-    "reference": "pull-and-bear",
+    "reference": "orc",
     "description": "Projet produit en collaboration avec Lacrapule Studio pour une campagne d’affichage en boutique Pull&Bear. Pour une première parti technique nous avons travaillé sur le shading, lighting, les caméras et les rendus.",
-    "images": ["/images/projects/Pull&Bear/01-Pull-Bear.jpg"]
+    "images": [
+      "/images/projects/orc/v_final_0100.jpg",
+      "/images/projects/orc/v_final_0100_color.jpg",
+      "/images/projects/orc/v_final_0100_spec.jpg",
+      "/images/projects/orc/v_final_0101.jpg",
+      "/images/projects/orc/v_final_0101_color.jpg",
+      "/images/projects/orc/v_final_0101_spec.jpg",
+      "/images/projects/orc/v_final_0102.jpg",
+      "/images/projects/orc/v_final_0102_color.jpg",
+      "/images/projects/orc/v_final_0102_spec.jpg"
+    ]
   }
 ]
