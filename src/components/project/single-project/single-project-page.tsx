@@ -7,7 +7,7 @@ const SingleProjectPage = ({ reference }: { reference: string }) => {
   return (
     <div className="container mx-auto">
       <div className="flex flex-col align-center">
-        <h1 className="shadow text-white text-center font-bold text-5xl pt-6 pb-2">
+        <h1 className="shadow text-white text-center font-bold text-3xl sm:text-5xl pt-6 pb-2">
           {project.title}
         </h1>
         <SingleProjectImages images={project.images} />

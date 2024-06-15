@@ -76,20 +76,23 @@ const HomeProjectList = () => {
   });
 
   return (
-    <div className="text-white flex flex-col gap-6" id="projects">
-      <h2 className="shadow text-center uppercase text-3xl sm:text-5xl text-white ">
-        Projects
-      </h2>
-      <div className="grid sm:grid-cols-12 sm:grid-rows-4 gap-6 min-h-[1500px]">
-        {projectsWithClassnames.map((project, index) => (
-          <HomeProjectListItem
-            key={project.reference}
-            {...project}
-            isLastAndImpair={
-              projects.length % 2 !== 0 && index === projects.length - 1
-            }
-          />
-        ))}
+    <div>
+      <div className="py-8" id="projects" />
+      <div className="text-white flex flex-col gap-6">
+        <h2 className="shadow text-center uppercase text-3xl sm:text-5xl text-white ">
+          Projects
+        </h2>
+        <div className="grid sm:grid-cols-12 sm:grid-rows-4 gap-6 min-h-[1500px]">
+          {projectsWithClassnames.map((project, index) => (
+            <HomeProjectListItem
+              key={project.reference}
+              {...project}
+              isLastAndImpair={
+                projects.length % 2 !== 0 && index === projects.length - 1
+              }
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
