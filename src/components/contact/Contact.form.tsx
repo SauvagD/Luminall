@@ -49,7 +49,7 @@ const ContactForm = () => {
               color: "#C9C9C9",
             }}
           >
-            contact@luminal-studio.com
+            contact@luminall-studio.com
           </h3>
         </div>
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">

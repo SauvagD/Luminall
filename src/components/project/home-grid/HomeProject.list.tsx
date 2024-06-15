@@ -1,7 +1,6 @@
 "use client";
 
 import { getProjects } from "@/lib/data";
-import { computed } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -12,7 +11,6 @@ const HomeProjectListItem = ({
   title,
   description,
   isLastAndImpair,
-  className,
 }: any) => {
   const lastSection = isLastAndImpair ? "overflow-hidden h-96" : "";
   const [isHovered, setIsHovered] = useState(false);
@@ -25,7 +23,7 @@ const HomeProjectListItem = ({
       onMouseLeave={() => setIsHovered(false)}
       className={`transition transition-all ease-in-out duration-300 relative hover:z-10 ${
         isLastAndImpair ? "" : "sm:hover:scale-125"
-      } hover:shadow-2xl cursor-pointer ${className} rounded overflow-hidden aspect-image ${lastSection}`}
+      } hover:shadow-2xl cursor-pointer col-span-6 row-span-1 rounded overflow-hidden aspect-image ${lastSection}`}
       style={{
         aspectRatio: 1.8,
       }}
@@ -62,22 +60,6 @@ const HomeProjectListItem = ({
 const HomeProjectList = () => {
   const projects = getProjects();
 
-  const projectsWithClassnames = projects.map((project, index) => {
-    const className = computed(() => {
-      // if (project.reference === "packshot-brewdog") {
-      //   return "col-span-5 row-span-2";
-      // }
-      // if ([7, 8].includes(index)) {
-      //   return "col-span-7 row-span-1";
-      // }
-      return "col-span-6 row-span-1";
-    });
-    return {
-      ...project,
-      className,
-    };
-  });
-
   return (
     <div>
       <div className="py-8" id="projects" />
@@ -86,7 +68,7 @@ const HomeProjectList = () => {
           Projects
         </h2>
         <div className="grid sm:grid-cols-12 sm:grid-rows-4 gap-6 min-h-[1500px]">
-          {projectsWithClassnames.map((project, index) => (
+          {projects.map((project, index) => (
             <HomeProjectListItem
               key={project.reference}
               {...project}

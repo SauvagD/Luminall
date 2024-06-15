@@ -14,6 +14,8 @@ import Image from "next/image";
 import { getImageName } from "@/lib/utils";
 import play from "../../../../public/icons/play.svg";
 
+const videoFormats = ["mov", "mp4"];
+
 const ProjectCarousel = ({ images, currentMainImgIndex, onSelectImg }: any) => {
   const [api, setApi] = useState<CarouselApi>();
   return (
@@ -32,7 +34,6 @@ const ProjectCarousel = ({ images, currentMainImgIndex, onSelectImg }: any) => {
               : "";
 
           const renderContent = () => {
-            const videoFormats = ["mov", "mp4"];
             if (videoFormats.some((format) => imageSrc.search(format) !== -1)) {
               return (
                 <div className="relative flex justify-center items-center">
@@ -108,10 +109,14 @@ const SingleProjectImages = ({ images }: { images: string[] }) => {
   const [mainImg, setMainImg] = useState(0);
 
   const renderContent = () => {
-    const isVideo = images[mainImg].search("mov");
-    if (isVideo !== -1) {
+    if (
+      videoFormats.some(
+        (format: string) => images[mainImg].search(format) !== -1
+      )
+    ) {
       return (
         <video
+          key={images[mainImg]}
           className="video h-[300px] sm:h-[80vh] object-contain"
           controls
           autoPlay

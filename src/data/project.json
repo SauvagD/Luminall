@@ -4,13 +4,13 @@
     "reference": "loreal-2024",
     "description": "Projet produit en étroite collaboration avec Lacrapule Studio à l’occasion du concours Style&Colour Trophy de L’Oréal Professionnel 2024 sur le thème Utopia. Pour une première parti technique nous avons travaillé sur le groom, le shading, lighting, les caméras et les rendus. Lors de cette collaboration nous avons pu conseiller, orienter et participer sur certains axes à la direction artistique du projet.",
     "images": [
-      "/images/projects/Loreal/wide_front_2024.jpg",
-      "/images/projects/Loreal/wide_back_2024.jpg",
-      "/images/projects/Loreal/albedo.jpg",
-      "/images/projects/Loreal/AO.jpg",
-      "/images/projects/Loreal/clay.jpg",
-      "/images/projects/Loreal/clay_07.jpg",
-      "/images/projects/Loreal/wireframe.jpg"
+      "/images/projects/LOREAL/wide_front_2024.jpg",
+      "/images/projects/LOREAL/wide_back_2024.jpg",
+      "/images/projects/LOREAL/albedo.jpg",
+      "/images/projects/LOREAL/AO.jpg",
+      "/images/projects/LOREAL/clay.jpg",
+      "/images/projects/LOREAL/clay_07.jpg",
+      "/images/projects/LOREAL/wireframe.jpg"
     ]
   },
   {
@@ -18,10 +18,10 @@
     "reference": "loreal-2023",
     "description": "Projet produit en étroite collaboration avec Lacrapule Studio à l’occasion du concours Style&Colour Trophy de L’Oréal Professionnel 2023 sur le thème METAHAIR. Pour une première parti technique nous avons travaillé sur le groom, le shading, lighting, les caméras et les rendus. Lors de cette collaboration nous avons pu conseiller, orienter et participer sur certains axes à la direction artistique du projet.",
     "images": [
-      "/images/projects/Loreal/wide_2023.jpg",
-      "/images/projects/Loreal/close_2023.jpg",
-      "/images/projects/Loreal/back_2023.jpg",
-      "/images/projects/Loreal/LOREAL_retake_16.9_v2.mov"
+      "/images/projects/LOREAL/wide_2023.jpg",
+      "/images/projects/LOREAL/close_2023.jpg",
+      "/images/projects/LOREAL/back_2023.jpg",
+      "/images/projects/LOREAL/LOREAL_retake_16.9_v2.mov"
     ]
   },
   {
@@ -33,7 +33,7 @@
       "/images/projects/Capucin/capucin_wide.jpg",
       "/images/projects/Capucin/wireframe_close_up.jpg",
       "/images/projects/Capucin/wireframe_wide.jpg",
-      "/images/projects/Capucin/close_up_albedo.jpg",
+      "/images/projects/Capucin/albedo_close_up.jpg",
       "/images/projects/Capucin/albedo_wide.jpg"
     ]
   },
@@ -42,15 +42,15 @@
     "reference": "buffle",
     "description": "FULL CG - ALL ASPECTS",
     "images": [
-      "/images/projects/Buffle/cam01.jpg",
-      "/images/projects/Buffle/cam2.jpg",
-      "/images/projects/Buffle/cam1_albedo_poils.jpg",
-      "/images/projects/Buffle/cam1_specs_poils.jpg",
-      "/images/projects/Buffle/turn.1.jpg",
-      "/images/projects/Buffle/turn.2.jpg",
-      "/images/projects/Buffle/turn.3.jpg",
-      "/images/projects/Buffle/skin_albedo.jpg",
-      "/images/projects/Buffle/skin_spec.jpg"
+      "/images/projects/buffle/cam01.jpg",
+      "/images/projects/buffle/cam2.jpg",
+      "/images/projects/buffle/cam1_albedo_poils.jpg",
+      "/images/projects/buffle/cam1_specs_poils.jpg",
+      "/images/projects/buffle/turn.1.jpg",
+      "/images/projects/buffle/turn.2.jpg",
+      "/images/projects/buffle/turn.3.jpg",
+      "/images/projects/buffle/skin_albedo.jpg",
+      "/images/projects/buffle/skin_spec.jpg"
     ]
   },
   {
