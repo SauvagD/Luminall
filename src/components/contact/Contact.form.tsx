@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "../ui/button";
 import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
+import Image from "next/image";
+import twitter from "../../../public/icons/social-medias/twitter.svg";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -95,7 +97,9 @@ const ContactForm = () => {
           <p className="text-center font-medium">{status}</p>
           <div className="flex flex-row gap-4 items-center">
             <div className="flex-1 h-[1px] bg-white" />
-            <div>Social medias</div>
+            <div>
+              <Image src={twitter} alt="twitter" width={20} height={20} />
+            </div>
             <div className="flex-1 h-[1px] bg-white" />
           </div>
         </form>
