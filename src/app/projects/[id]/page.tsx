@@ -1,11 +1,8 @@
 import SingleProjectPage from "@/components/project/single-project/single-project-page";
 import { getProject } from "@/lib/data";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 
-export async function generateMetadata(
-  { params }: any,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({ params }: any): Promise<Metadata> {
   // read route params
   const project: any = getProject(params.id);
 
@@ -23,6 +20,7 @@ export async function generateMetadata(
     twitter: {
       title: project.title,
       description: project.description,
+      images: [project.images],
     },
     alternates: {
       canonical: "/projects/" + project.reference,

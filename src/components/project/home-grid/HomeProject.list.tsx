@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const HomeProjectListItem = ({
   reference,
-  images,
+  poster,
   title,
   description,
   isLastAndImpair,
@@ -42,7 +42,7 @@ const HomeProjectListItem = ({
         </div>
       )}
       <Image
-        src={images[0]}
+        src={poster}
         alt={description}
         sizes="100vw"
         style={{

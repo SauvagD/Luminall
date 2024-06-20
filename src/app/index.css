@@ -42,10 +42,8 @@ html::-webkit-scrollbar-thumb {
   width: 100%;
   max-height: calc(100vh - 56px);
   position: relative;
-  overflow: hidden;
-  aspect-ratio: 16 / 9;
+
   border-radius: 10px;
-  position: relative;
 }
 
 .shadow {

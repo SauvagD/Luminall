@@ -10,7 +10,12 @@ const Header = () => {
   return (
     <header className="flex flex-col w-screen text-white bg-background fixed top-0 left-0 right-0 px-8 py-2 z-50		">
       <div className="flex flex-row justify-between items-end">
-        <Link href="/" className="uppercase text-3xl font-semibold">
+        <Link
+          href="/"
+          data-to="home"
+          className="uppercase text-3xl font-semibold link"
+          onClick={() => setOpened(false)}
+        >
           LUMINALL
         </Link>
         <Navbar opened={opened} setOpened={setOpened} />

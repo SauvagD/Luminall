@@ -3,6 +3,7 @@
     "title": "L’OREAL 2024",
     "reference": "loreal-2024",
     "description": "Projet produit en étroite collaboration avec Lacrapule Studio à l’occasion du concours Style&Colour Trophy de L’Oréal Professionnel 2024 sur le thème Utopia. Pour une première parti technique nous avons travaillé sur le groom, le shading, lighting, les caméras et les rendus. Lors de cette collaboration nous avons pu conseiller, orienter et participer sur certains axes à la direction artistique du projet.",
+    "poster": "/images/projects/LOREAL/wide_front_2024.jpg",
     "images": [
       "/images/projects/LOREAL/wide_front_2024.jpg",
       "/images/projects/LOREAL/wide_back_2024.jpg",
@@ -17,17 +18,19 @@
     "title": "L’OREAL 2023",
     "reference": "loreal-2023",
     "description": "Projet produit en étroite collaboration avec Lacrapule Studio à l’occasion du concours Style&Colour Trophy de L’Oréal Professionnel 2023 sur le thème METAHAIR. Pour une première parti technique nous avons travaillé sur le groom, le shading, lighting, les caméras et les rendus. Lors de cette collaboration nous avons pu conseiller, orienter et participer sur certains axes à la direction artistique du projet.",
+    "poster": "/images/projects/LOREAL/wide_2023.jpg",
     "images": [
+      "/images/projects/LOREAL/LOREAL_retake_16.9_v2.mov",
       "/images/projects/LOREAL/wide_2023.jpg",
       "/images/projects/LOREAL/close_2023.jpg",
-      "/images/projects/LOREAL/back_2023.jpg",
-      "/images/projects/LOREAL/LOREAL_retake_16.9_v2.mov"
+      "/images/projects/LOREAL/back_2023.jpg"
     ]
   },
   {
     "title": "Capucin",
     "reference": "capucin",
     "description": "FULL CG - ALL ASPECTS",
+    "poster": "/images/projects/Capucin/capucin_close_up.jpg",
     "images": [
       "/images/projects/Capucin/capucin_close_up.jpg",
       "/images/projects/Capucin/capucin_wide.jpg",
@@ -41,6 +44,7 @@
     "title": "Buffle",
     "reference": "buffle",
     "description": "FULL CG - ALL ASPECTS",
+    "poster": "/images/projects/buffle/cam01.jpg",
     "images": [
       "/images/projects/buffle/cam01.jpg",
       "/images/projects/buffle/cam2.jpg",
@@ -57,6 +61,7 @@
     "title": "Baleine à bosses",
     "reference": "baleine",
     "description": "FULL CG - ALL ASPECTS",
+    "poster": "/images/projects/Baleine/master_2.jpg",
     "images": [
       "/images/projects/Baleine/master_2.jpg",
       "/images/projects/Baleine/master_1.jpg",
@@ -69,6 +74,7 @@
     "title": "Dragon",
     "reference": "dragon",
     "description": "FULL CG - ALL ASPECTS",
+    "poster": "/images/projects/Dragon/profile_3_4_light.jpg",
     "images": [
       "/images/projects/Dragon/profile_3_4_light.jpg",
       "/images/projects/Dragon/profile_light.jpg",
@@ -79,60 +85,68 @@
     "title": "PACKSHOT BREWDOG",
     "reference": "packshot-brewdog",
     "description": "FULL CG - ALL ASPECTS",
+    "poster": "/images/projects/punk_ipa_packshot.jpg",
     "images": ["/images/projects/punk_ipa_packshot.jpg"]
   },
   {
     "title": "GTR studio shot",
     "reference": "gtr-studio-shot",
     "description": "FULL CG - Lighting, Shading, Rendering",
+    "poster": "/images/projects/back_GTR.jpg",
     "images": ["/images/projects/back_GTR.jpg"]
   },
   {
     "title": "CASE STUDY - WEST SEA WORLD",
     "reference": "west-sea-world",
     "description": "FULL CG - ALL ASPECTS",
+    "poster": "/images/projects/west-world-cuts/WW_img.png",
     "images": [
-      "/images/projects/west-world-cuts/WW_img.png",
       "/images/projects/west-world-cuts/WW_cut_01.mp4",
       "/images/projects/west-world-cuts/WW_cut_02.mp4",
-      "/images/projects/west-world-cuts/WW_cut_03.mp4"
+      "/images/projects/west-world-cuts/WW_cut_03.mp4",
+      "/images/projects/west-world-cuts/WW_img.png"
     ]
   },
   {
     "title": "TEST CELL SHADING - CARTOON",
     "reference": "cell-shading-cartoon",
     "description": "WIP / TEST FULL CG - Layout, Shading, Lighting, Rendering",
+    "poster": "/images/projects/9x8_v2.jpg",
     "images": ["/images/projects/9x8_v2.jpg"]
   },
   {
     "title": "ENVIRONEMENT",
     "reference": "environement",
     "description": "FULL CG - Modeling (maison), Layout, Shading, Lighting, Rendering, Compositing",
+    "poster": "/images/projects/minekraft_house_light.jpg",
     "images": ["/images/projects/minekraft_house_light.jpg"]
   },
   {
     "title": "Barbossa",
     "reference": "barbossa",
     "description": "FULL CG - ALL ASPECTS",
+    "poster": "/images/projects/barbossa/close_up_breakdown_001.jpg",
     "images": [
+      "/images/projects/barbossa/tete_barbossa.mov",
+      "/images/projects/barbossa/barbossa_body.mov",
       "/images/projects/barbossa/close_up_breakdown_001.jpg",
       "/images/projects/barbossa/close_up_breakdown_010.jpg",
       "/images/projects/barbossa/close_up_breakdown_062.jpg",
-      "/images/projects/barbossa/close_up_breakdown_088.jpg",
-      "/images/projects/barbossa/barbossa_body.mov",
-      "/images/projects/barbossa/tete_barbossa.mov"
+      "/images/projects/barbossa/close_up_breakdown_088.jpg"
     ]
   },
   {
     "title": "PULL & BEAR",
     "reference": "pull-and-bear",
     "description": "Projet produit en collaboration avec Lacrapule Studio pour une campagne d’affichage en boutique Pull&Bear. Pour une première parti technique nous avons travaillé sur le shading, lighting, les caméras et les rendus.",
+    "poster": "/images/projects/Pull&Bear/01-Pull-Bear.jpg",
     "images": ["/images/projects/Pull&Bear/01-Pull-Bear.jpg"]
   },
   {
     "title": "ORC",
     "reference": "orc",
-    "description": "Projet produit en collaboration avec Lacrapule Studio pour une campagne d’affichage en boutique Pull&Bear. Pour une première parti technique nous avons travaillé sur le shading, lighting, les caméras et les rendus.",
+    "description": "FULL CG - ALL ASPECTS",
+    "poster": "/images/projects/orc/v_final_0100.jpg",
     "images": [
       "/images/projects/orc/v_final_0100.jpg",
       "/images/projects/orc/v_final_0100_color.jpg",

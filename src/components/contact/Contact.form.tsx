@@ -9,6 +9,25 @@ import { Textarea } from "../ui/textarea";
 import Image from "next/image";
 import twitter from "../../../public/icons/social-medias/twitter.svg";
 
+const compileMessage = (name: string) => `Bonjour ${name} !  
+
+Nous avons bien reçu vôtre message, nous vous répondrons dans les plus brefs délais, n’hésitez pas à nous suivre notre compte sur linkedin et instagram. 
+
+Merci, à bientôt ! 
+
+Luminall Studio
+`;
+
+async function sendMail({ name, email, message, object }: any) {
+  return await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ name, email, message, object }),
+  });
+}
+
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -19,19 +38,28 @@ const ContactForm = () => {
     e.preventDefault();
     setStatus("L'envoi est en cours");
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, email, message }),
+    const res = await sendMail({
+      name,
+      email: "contact@luminall-studio.com",
+      message,
+      object: `Nouveau message de contact de ${name}`,
     });
 
     if (res.ok) {
-      setName("");
-      setEmail("");
-      setMessage("");
-      setStatus("L'email a bien été envoyé !");
+      const luminallReplyRes = await sendMail({
+        name: "Luminall studio - Confirmation de réception de votre message",
+        email,
+        message: compileMessage(name),
+        object: `Luminall studio`,
+      });
+      if (luminallReplyRes.ok) {
+        setName("");
+        setEmail("");
+        setMessage("");
+        setStatus("L'email a bien été envoyé !");
+        return;
+      }
+      setStatus("Un problème est apparu. Veuillez réessayez");
     } else {
       setStatus("Un problème est apparu. Veuillez réessayez");
     }

@@ -11,10 +11,35 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
-import { getImageName } from "@/lib/utils";
+import { cn, computed, getImageName } from "@/lib/utils";
 import play from "../../../../public/icons/play.svg";
+import { VIDEO_FORMATS } from "@/constant";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
-const videoFormats = ["mov", "mp4"];
+const CustomCarouselButton = ({ className, onClick, direction }: any) => {
+  const Arrow = computed(() => {
+    if (direction === "left") {
+      return ArrowLeft;
+    }
+    return ArrowRight;
+  });
+
+  return (
+    <Button
+      variant="outline"
+      className={cn(
+        "absolute h-8 w-8 rounded-full -right-12 top-1/2 -translate-y-1/2",
+        className
+      )}
+      size="icon"
+      onClick={onClick}
+    >
+      <Arrow className="h-4 w-4" />
+      <span className="sr-only">Next slide</span>
+    </Button>
+  );
+};
 
 const ProjectCarousel = ({ images, currentMainImgIndex, onSelectImg }: any) => {
   const [api, setApi] = useState<CarouselApi>();
@@ -22,6 +47,7 @@ const ProjectCarousel = ({ images, currentMainImgIndex, onSelectImg }: any) => {
     <Carousel
       opts={{
         align: "start",
+        loop: true,
       }}
       setApi={setApi}
       className="w-full mx-auto max-w-[80%]"
@@ -34,7 +60,9 @@ const ProjectCarousel = ({ images, currentMainImgIndex, onSelectImg }: any) => {
               : "";
 
           const renderContent = () => {
-            if (videoFormats.some((format) => imageSrc.search(format) !== -1)) {
+            if (
+              VIDEO_FORMATS.some((format) => imageSrc.search(format) !== -1)
+            ) {
               return (
                 <div className="relative flex justify-center items-center">
                   <Image
@@ -96,9 +124,8 @@ const ProjectCarousel = ({ images, currentMainImgIndex, onSelectImg }: any) => {
       <CarouselNext
         className="text-white"
         onClick={() => {
-          const currentItem = api?.selectedScrollSnap() || 0;
-          onSelectImg(currentItem + 1);
           api?.scrollNext();
+          onSelectImg(api?.selectedScrollSnap());
         }}
       />
     </Carousel>
@@ -110,7 +137,7 @@ const SingleProjectImages = ({ images }: { images: string[] }) => {
 
   const renderContent = () => {
     if (
-      videoFormats.some(
+      VIDEO_FORMATS.some(
         (format: string) => images[mainImg].search(format) !== -1
       )
     ) {
@@ -131,6 +158,7 @@ const SingleProjectImages = ({ images }: { images: string[] }) => {
         src={images[mainImg]}
         width={1000}
         height={600}
+        quality={100}
         style={{
           width: "100%",
         }}

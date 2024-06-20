@@ -2,7 +2,7 @@ import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Prompt as FontSans } from "next/font/google";
 import "./globals.css";
 import "./index.css";
 import Script from "next/script";
@@ -10,7 +10,9 @@ import Script from "next/script";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+  weight: "300",
 });
+
 export const metadata: Metadata = {
   title: "Luminall",
   description: "3D VFX studio",

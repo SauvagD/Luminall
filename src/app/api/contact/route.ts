@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   const body = await req.json();
-  const { email, message, name } = body;
+  const { email, message, object } = body;
   // Configure the transporter for sending email
   const transporter = nodemailer.createTransport({
     host: "smtp.ionos.fr",
@@ -16,8 +16,8 @@ export async function POST(req: Request) {
 
   const mailOptions = {
     from: "contact@luminall-studio.com",
-    to: "contact@luminall-studio.com",
-    subject: `Luminall contact ${name}`,
+    to: email,
+    subject: object,
     text: message,
     replyTo: email,
   };

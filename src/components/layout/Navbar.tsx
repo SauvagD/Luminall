@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const Burger = ({ toggle, opened }: any) => {
   const renderContent = () => {
@@ -21,11 +20,24 @@ const Burger = ({ toggle, opened }: any) => {
 
 const Navbar = ({ setOpened, opened }: any) => {
   const router = useRouter();
+  const pathname = usePathname();
+
   useEffect(() => {
     const handleScroll = (event: any) => {
       event.preventDefault();
       const targetId = event.currentTarget.getAttribute("data-to");
       const targetElement = document.getElementById(targetId);
+      if (targetId === "home") {
+        if (pathname.includes("projects")) {
+          router.push("/");
+          return;
+        }
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+        return;
+      }
       if (targetElement) {
         window.scrollTo({
           top: targetElement.offsetTop,
@@ -35,7 +47,6 @@ const Navbar = ({ setOpened, opened }: any) => {
         router.push(`/#${targetId}`);
       }
     };
-
     const links = document.querySelectorAll(".link");
     links.forEach((link) => {
       link.addEventListener("click", handleScroll);
@@ -46,7 +57,7 @@ const Navbar = ({ setOpened, opened }: any) => {
         link.removeEventListener("click", handleScroll);
       });
     };
-  }, [router]);
+  }, [pathname, router]);
 
   return (
     <>

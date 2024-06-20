@@ -10,23 +10,51 @@ import {
 import { getProjects } from "@/lib/data";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { computed } from "@/lib/utils";
 
-const HomeSlide = ({ images, title }: any) => {
+const HomeSlide = ({ poster, title, reference }: any) => {
+  const positionByProject: any = {
+    baleine: -75,
+    buffle: 450,
+  };
+  const left = computed(() => {
+    if (typeof window === "undefined") return "";
+    if (screen.width > 640) {
+      return "";
+    }
+    return positionByProject[reference] || "";
+  });
+
+  const width = computed(() => {
+    if (typeof window === "undefined") return "";
+    if (screen.width > 640) {
+      return "w-full";
+    }
+    if (positionByProject[reference]) {
+      return "";
+    }
+    return "w-full";
+  });
+
   return (
     <CarouselItem>
-      <div className="video-container w-full h-screen overflow-hidden flex justify-center items-center">
+      <Link
+        href={`/projects/${reference}`}
+        className="rounded relative h-screen flex justify-center items-center overflow-hidden"
+      >
         <Image
-          src={images[0]}
+          src={poster}
           alt={title}
           width={1500}
           height={1500}
-          className="video absolute top-0 left-1/2 transform -translate-x-1/2 h-[90vh] rounded object-cover "
+          className={`absolute top-0 left-1/2 ${width} transform -translate-x-1/2 h-[90%] rounded-lg object-cover`}
           style={{
-            width: "100%",
             maxWidth: "unset",
+            left,
           }}
         />
-      </div>
+      </Link>
     </CarouselItem>
   );
 };
