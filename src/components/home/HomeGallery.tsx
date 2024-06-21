@@ -26,17 +26,6 @@ const HomeSlide = ({ poster, title, reference }: any) => {
     return positionByProject[reference] || "";
   });
 
-  const width = computed(() => {
-    if (typeof window === "undefined") return "";
-    if (screen.width > 640) {
-      return "w-full";
-    }
-    if (positionByProject[reference]) {
-      return "";
-    }
-    return "w-full";
-  });
-
   return (
     <CarouselItem>
       <Link
@@ -48,7 +37,11 @@ const HomeSlide = ({ poster, title, reference }: any) => {
           alt={title}
           width={1500}
           height={1500}
-          className={`absolute top-0 left-1/2 ${width} transform -translate-x-1/2 h-[90%] rounded-lg object-cover`}
+          priority
+          quality={100}
+          className={`absolute top-0 left-1/2 ${
+            positionByProject[reference] ? "max-[600px]:w-[unset]" : ""
+          }  w-full transform -translate-x-1/2 h-[90%] rounded-lg object-cover`}
           style={{
             maxWidth: "unset",
             left,

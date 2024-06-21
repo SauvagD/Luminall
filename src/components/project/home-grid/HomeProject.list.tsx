@@ -15,6 +15,8 @@ const HomeProjectListItem = ({
   const lastSection = isLastAndImpair ? "overflow-hidden h-96" : "";
   const [isHovered, setIsHovered] = useState(false);
 
+  const referenceWithCustomPostion = ["orc", "dragon"];
+
   return (
     <Link
       key={reference}
@@ -29,7 +31,7 @@ const HomeProjectListItem = ({
       }}
     >
       {isHovered && (
-        <div className="flex flex-col justify-end gap-4 absolute bottom-0 right-0 left-0  bg-gradient-to-t from-black to-bg-background bg-opacity-50 h-3/6 p-6">
+        <div className="flex flex-col justify-end gap-4 absolute bottom-0 right-0 left-0 z-50  bg-gradient-to-t from-black to-bg-background bg-opacity-50 h-3/6 p-6">
           <p className="uppercase text-1xl text-white font-bold">{title}</p>
           <p
             className="text-normal text-white text-balance two-lines-ellipsis"
@@ -45,6 +47,9 @@ const HomeProjectListItem = ({
         src={poster}
         alt={description}
         sizes="100vw"
+        className={`absolute z-0 ${
+          referenceWithCustomPostion.includes(reference) ? "-top-[100px]" : ""
+        }`}
         style={{
           width: "100%",
           height: "auto",
