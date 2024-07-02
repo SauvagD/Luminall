@@ -27,7 +27,7 @@ const HomeSlide = ({ poster, title, reference }: any) => {
   });
 
   const width = computed(() => {
-    if (typeof window === "undefined") return "";
+    if (typeof window === "undefined") return "w-full";
     if (screen.width > 640) {
       return "w-full";
     }

@@ -24,12 +24,11 @@ export async function POST(req: Request) {
 
   try {
     // Send email
-    await transporter.sendMail(mailOptions, (err, info) => {
+    const result = await transporter.sendMail(mailOptions, (err, info) => {
       console.log("err, info", err, info);
     });
-    Response.json({ message: "success" });
+    return Response.json({ message: "success", result });
   } catch (error) {
-    Response.json({ message: "failed" });
+    return Response.json({ message: "failed", error });
   }
-  return Response.json({ data: "tes" });
 }

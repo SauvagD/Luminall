@@ -8,6 +8,8 @@ import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
 import Image from "next/image";
 import twitter from "../../../public/icons/social-medias/twitter.svg";
+import { SOCIAL_MEDIAS } from "@/constant";
+import Link from "next/link";
 
 const compileMessage = (name: string) => `Bonjour ${name} !  
 
@@ -83,7 +85,7 @@ const ContactForm = () => {
           </h3>
         </div>
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-          <div className="grid w-full items-center gap-3 w-full">
+          <div className="grid items-center gap-3 w-full">
             <Label htmlFor="nom" className="text-2xl">
               Nom
             </Label>
@@ -125,8 +127,12 @@ const ContactForm = () => {
           <p className="text-center font-medium">{status}</p>
           <div className="flex flex-row gap-4 items-center">
             <div className="flex-1 h-[1px] bg-white" />
-            <div>
-              <Image src={twitter} alt="twitter" width={20} height={20} />
+            <div className=" flex flex-row gap-4 justify-center items-center">
+              {SOCIAL_MEDIAS.map(({ name, href, icon }) => (
+                <Link key={"footer-" + name} href={href} target="_blank">
+                  <Image src={icon} alt={name} width={25} height={25} />
+                </Link>
+              ))}
             </div>
             <div className="flex-1 h-[1px] bg-white" />
           </div>
