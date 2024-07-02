@@ -13,10 +13,10 @@ const Header = () => {
         <Link
           href="/"
           data-to="home"
-          className="uppercase text-3xl font-semibold link"
+          className="text-3xl font-semibold link"
           onClick={() => setOpened(false)}
         >
-          LUMINALL
+          Luminall
         </Link>
         <Navbar opened={opened} setOpened={setOpened} />
       </div>

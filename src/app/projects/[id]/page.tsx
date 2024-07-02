@@ -15,12 +15,12 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
       description: project.description,
       type: "website",
       url: "/projects/" + project.reference,
-      images: [project.images],
+      images: project.images,
     },
     twitter: {
       title: project.title,
       description: project.description,
-      images: [project.images],
+      images: project.images,
     },
     alternates: {
       canonical: "/projects/" + project.reference,
