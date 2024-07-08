@@ -27,8 +27,15 @@ export async function POST(req: Request) {
 
   try {
     // Send email
-    const result = await transporter.sendMail(mailOptions, (err, info) => {
-      console.log("err, info", err, info);
+    const result = await new Promise((resolve, reject) => {
+      transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+          console.error(err);
+          reject(err);
+        } else {
+          resolve(info);
+        }
+      });
     });
     return Response.json({ message: "success", result });
   } catch (error) {
