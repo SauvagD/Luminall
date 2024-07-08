@@ -8,6 +8,9 @@ export async function POST(req: Request) {
     host: "smtp.ionos.fr",
     port: 587,
     secure: false,
+    tls: {
+      ciphers: "SSLv3",
+    },
     auth: {
       user: "contact@luminall-studio.com",
       pass: "Z79pgsJmwCyC5KGA",

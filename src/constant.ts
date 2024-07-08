@@ -1,5 +1,4 @@
 import twitter from "../public/icons/social-medias/twitter.svg";
-import tiktok from "../public/icons/social-medias/tiktok.webp";
 import insta from "../public/icons/social-medias/insta.svg";
 import linkedin from "../public/icons/social-medias/linkedin.svg";
 
