@@ -5,6 +5,7 @@
     "description": "Projet produit en étroite collaboration avec Lacrapule Studio à l’occasion du concours Style&Colour Trophy de L’Oréal Professionnel 2024 sur le thème Utopia. Pour une première parti technique nous avons travaillé sur le groom, le shading, lighting, les caméras et les rendus. Lors de cette collaboration nous avons pu conseiller, orienter et participer sur certains axes à la direction artistique du projet.",
     "poster": "/images/projects/LOREAL/wide_front_2024.jpg",
     "images": [
+      "/images/projects/LOREAL/Loreal_main_4.5.mp4",
       "/images/projects/LOREAL/wide_front_2024.jpg",
       "/images/projects/LOREAL/wide_back_2024.jpg",
       "/images/projects/LOREAL/albedo.jpg",
@@ -24,6 +25,18 @@
       "/images/projects/LOREAL/wide_2023.jpg",
       "/images/projects/LOREAL/close_2023.jpg",
       "/images/projects/LOREAL/back_2023.jpg"
+    ]
+  },
+  {
+    "title": "Palmes d'Or",
+    "reference": "palmes-or",
+    "description": "Palmes d'Or - Full CG All aspects - Modeling, Texturing, Lighting, FX, Rendering, Compositing",
+    "poster": "/images/projects/Packshot/Final_01_light.jpg",
+    "images": [
+      "/images/projects/Packshot/Final_01_light.jpg",
+      "/images/projects/Packshot/Final_02_light.jpg",
+      "/images/projects/Packshot/spec.jpg",
+      "/images/projects/Packshot/wireframe.jpg"
     ]
   },
   {
